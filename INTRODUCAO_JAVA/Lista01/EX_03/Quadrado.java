@@ -8,7 +8,7 @@ System.out.println("x = " + x);
 System.out.println("y = " + y);
 }
 } */
-package EX_ORIENTACAO_A_OBJETOS.EX_03;
+package Lista01.EX_03;
 
     class Quadrado {
         int lado;

@@ -1,4 +1,4 @@
-package EX_ORIENTACAO_A_OBJETOS.EX_01;
+package Lista01.EX_01;
 
 public class Autor {
     String nome;

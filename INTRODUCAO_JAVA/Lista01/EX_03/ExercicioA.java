@@ -16,7 +16,7 @@ q2.imprime();
 q1.imprime();
 }
 } */
-package EX_ORIENTACAO_A_OBJETOS.EX_03;
+package Lista01.EX_03;
 
 public class ExercicioA {
         public static void main(String[] args) {

@@ -9,13 +9,13 @@ String nome;​
 int id;​
 }
 */
-package EX_ORIENTACAO_A_OBJETOS.EX_02;
+package Lista01.EX_02;
 
 public class Main {
     public static void main(String[] args) {
     Autor aut;
     aut = new Autor();
-    carregaDoTeclado();
+    aut.carregaDoTeclado();
     System.out.println("Nome: " + aut.nome + "\nId: " + aut.id);
 
     }

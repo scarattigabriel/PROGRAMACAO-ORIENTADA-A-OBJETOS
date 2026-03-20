@@ -4,7 +4,7 @@ class Autor {
 String nome;
 int id;
 } */
-package EX_ORIENTACAO_A_OBJETOS.EX_01;
+package Lista01.EX_01;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args)

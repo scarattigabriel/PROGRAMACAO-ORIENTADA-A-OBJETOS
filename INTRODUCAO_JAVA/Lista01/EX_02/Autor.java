@@ -7,18 +7,20 @@ String nome;​
 ​
 int id;​
 }*/
-package EX_ORIENTACAO_A_OBJETOS.EX_02;
+package Lista01.EX_02;
 import java.util.Scanner;
 public class Autor {
     String nome;
-    int id;   
+    int id;
+    Scanner sc = new Scanner(System.in);
 
     void carregaDoTeclado()
     {
-        Scanner sc = new Scanner(System.in);
+
         System.out.println("Digite seu nome: ");
         this.nome = sc.nextLine();
         System.out.println("Digite o ID ");
         this.id = sc.nextInt();
+        return;
     }
 }
