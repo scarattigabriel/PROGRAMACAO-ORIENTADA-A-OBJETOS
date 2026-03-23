@@ -6,8 +6,26 @@ programa principal, instancie a agenda, cadastre 15 pessoas com seus dados e con
 possibilite a pesquisa por nome para exibir as informações completas da pessoa encontrada. */
 package Lista02;
 
+import java.util.Scanner;
+
 public class Data {
     int dia;
     int mes;
     int ano;
+
+    void imprimeData()
+    {
+        System.out.println(dia + "/" + mes + "/" + ano);
+    }
+
+    void criaData(Scanner sc) {
+        System.out.println("Digite o dia do seu nascimento: ");
+        dia = sc.nextInt();
+        System.out.println("Digite o mês do seu nascimento: ");
+        mes = sc.nextInt();
+        System.out.println("Digite o ano do seu nascimento: ");
+        ano = sc.nextInt();
+        sc.nextLine(); 
+    }
+
 }

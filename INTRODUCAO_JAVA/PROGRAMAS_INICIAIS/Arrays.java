@@ -5,7 +5,7 @@ public class Arrays {
         int vet[15];*/
 
         //em Java
-        int[] vet = new int[15];
+        //int[] vet = new int[15];
         // ||
         int vet2[];
         vet2 = new int[15];

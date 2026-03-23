@@ -5,43 +5,48 @@ capaz de armazenar até quinze pessoas, permitindo cadastrar, listar todas e bus
 programa principal, instancie a agenda, cadastre 15 pessoas com seus dados e contatos, liste todas as cadastradas e
 possibilite a pesquisa por nome para exibir as informações completas da pessoa encontrada. */ 
 package Lista02;
-
-public class Agenda {
+import java.util.Scanner;
+class Agenda {
     Pessoa[] pessoas = new Pessoa[15];
-    int numPessoas;
+    int numPessoas = 0;
     
-    void cadastraPessoa(Pessoa p)
-    {
-        if(numPessoas == 15)
-        {
+    void cadastraPessoa(Scanner sc) {
+        if (numPessoas >= 15) {
             System.out.println("Lista de pessoas cheia!");
+        } else {
+            pessoas[numPessoas] = new Pessoa(); // Instanciando o objeto antes de usar
+            pessoas[numPessoas].criaPessoa(sc);
+            numPessoas++;
         }
-        else
-        {
-            for (int i = 0; i < 15; i++){
-                if(pessoas[i] == null)
-                {
-                    pessoas[i] = p;
-                    numPessoas++;
-                }
-        }
-        }
-
-        return;
-    }
-
-    void listaPessoas()
-    {
-        System.out.println("Listando pessoas: ");
-        for(int i = 0; i < numPessoas; i++)
-            {
-                System.out.println("Nome: " + pessoas[i].nome);
-                System.out.println("Data de nascimento: " + pessoas[i].data_nasc);
-                System.out.println("Número de contatos: " + pessoas[i].numContatos);
-                pessoas[i].listarContatos();
-            } 
     }
 
 
+    void listaPessoas() {
+        System.out.println("\n--- Listando todas as pessoas ---");
+        if (numPessoas == 0) {
+            System.out.println("Nenhuma pessoa cadastrada.");
+            return;
+        }
+        for (int i = 0; i < numPessoas; i++) {
+            pessoas[i].listarPessoas();
+        } 
+    }
+
+
+    void buscaNome(Scanner sc) {
+        System.out.println("Digite o nome a ser buscado: ");
+        String nomeBusca = sc.nextLine();
+        boolean encontrado = false;
+
+        for (int i = 0; i < numPessoas; i++) {
+            if (pessoas[i].nome.equalsIgnoreCase(nomeBusca)) {
+                System.out.println("\n--- Cadastro Encontrado ---");
+                pessoas[i].listarPessoas();
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Nenhuma pessoa encontrada com o nome: " + nomeBusca);
+        }
+    }
 }
-
